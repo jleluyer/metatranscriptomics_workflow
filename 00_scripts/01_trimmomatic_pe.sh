@@ -18,14 +18,14 @@ LOG_FOLDER="98_log_files"
 cp $SCRIPT $LOG_FOLDER/"$TIMESTAMP"_"$NAME"
 
 # module load
-. /appli/bioinfo/trimmomatic/latest/env.sh
+# trimmomatic
 
 # Global variables
 
 ADAPTERFILE="01_info_files/adapters.fasta"
 NCPU=8
 base=__BASE__
-REPO="/scratch/home1/jleluyer/capamax"
+REPO="/path/to/raw/files"
 
 trimmomatic PE -Xmx60G \
         -threads 8 \
