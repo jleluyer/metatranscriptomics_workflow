@@ -4,7 +4,7 @@
 rm 00_scripts/datarmor_jobs/MERGE*sh
 
 # launch scripts for Colosse
-for file in $(ls /scratch/home1/jleluyer/capamax/03_trimmed/*.paired.fastq.gz|sed 's/_R[12].paired.fastq.gz//g'|sort -u)
+for file in $(ls 03_trimmed/*.paired.fastq.gz|sed 's/_R[12].paired.fastq.gz//g'|sort -u)
 
 do
 	base=$(basename "$file")
