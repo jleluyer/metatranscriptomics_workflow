@@ -13,7 +13,7 @@ cd $PBS_O_WORKDIR
 
 #usage sorterna
 base=__BASE__
-REPO="/path/to/trimmed/files/dir/"
+REPO="03_trimmed"
 
 zcat "$REPO"/"$base"_R1.paired.fastq.gz >"$REPO"/"$base"_R1.paired.fastq
 zcat "$REPO"/"$base"_R2.paired.fastq.gz >"$REPO"/"$base"_R2.paired.fastq
