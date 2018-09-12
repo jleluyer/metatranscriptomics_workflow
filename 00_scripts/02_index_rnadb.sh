@@ -8,12 +8,11 @@
 
 cd $PBS_O_WORKDIR
 
-
-. /appli/bioinfo/sortmerna/latest/env.sh
-
+# module load
+#sortmerna
 
 #usage sorterna
-repodb="/home1/datawork/jleluyer/00_ressources/rRNA_database/"
+repodb="/path/to.db/repo"
 
 cd $repodb
 
