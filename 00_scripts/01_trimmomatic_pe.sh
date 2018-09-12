@@ -1,6 +1,6 @@
 #!/bin/bash
 #PBS -N trimmomatic__BASE__
-#PBS -o trimmomatic__BASE__.out
+#PBS -o 98_log_files/trimmomatic__BASE__.out
 #PBS -l walltime=02:00:00
 #PBS -l mem=60g
 #####PBS -m ea 
@@ -18,22 +18,24 @@ LOG_FOLDER="98_log_files"
 cp $SCRIPT $LOG_FOLDER/"$TIMESTAMP"_"$NAME"
 
 # module load
+. /appli/bioinfo/trimmomatic/latest/env.sh
 
 # Global variables
 
-ADAPTERFILE="univec.fasta"
+ADAPTERFILE="01_info_files/adapters.fasta"
 NCPU=8
 base=__BASE__
+REPO="/scratch/home1/jleluyer/capamax"
 
 trimmomatic PE -Xmx60G \
         -threads 8 \
         -phred33 \
-        02_data/"$base"_R1.fastq.gz \
-        02_data/"$base"_R2.fastq.gz \
-        03_trimmed/"$base"_R1.paired.fastq.gz \
-        03_trimmed/"$base"_R1.single.fastq.gz \
-        03_trimmed/"$base"_R2.paired.fastq.gz \
-        03_trimmed/"$base"_R2.single.fastq.gz \
+        "$REPO"/02_data/"$base"_R1.fastq.gz \
+        "$REPO"/02_data/"$base"_R2.fastq.gz \
+        "$REPO"/03_trimmed/"$base"_R1.paired.fastq.gz \
+        "$REPO"/03_trimmed/"$base"_R1.single.fastq.gz \
+        "$REPO"/03_trimmed/"$base"_R2.paired.fastq.gz \
+        "$REPO"/03_trimmed/"$base"_R2.single.fastq.gz \
         ILLUMINACLIP:"$ADAPTERFILE":2:20:7 \
         LEADING:20 \
         TRAILING:20 \
