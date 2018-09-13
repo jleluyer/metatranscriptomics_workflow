@@ -36,9 +36,6 @@ qsub 00_scripts/02_index_rnadb.sh
 00_scripts/datarmor_jobs/07_fraggenescan_jobs.sh
 ```
 
-
-## Notes
-
 ## Dependencies
 
 [Fastq-join](https://bioconda.github.io/recipes/fastq-join/README.html)
@@ -49,7 +46,7 @@ qsub 00_scripts/02_index_rnadb.sh
 
 [Trimmomatic](http://www.usadellab.org/cms/index.php?page=trimmomatic)
 
-## Dependences
+## Notes
 
 This pipeline is adapted from [Metatrans](http://www.metatrans.org/) pipeline
 
