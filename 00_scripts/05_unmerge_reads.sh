@@ -8,14 +8,13 @@
 
 cd $PBS_O_WORKDIR
 
-
-. /appli/bioinfo/sortmerna/latest/env.sh
-
+#module load
+#sortemrna
 
 #usage sorterna
 base=__BASE__
-REPO="/scratch/home1/jleluyer/capamax/04_filtered_non_rna"
-REPO_unmerge="/scratch/home1/jleluyer/capamax/04_filtered_non_rna_unmerge"
+REPO="04_filtered_non_rna"
+REPO_unmerge="04_filtered_non_rna_unmerge"
 
 unmerge-paired-reads.sh "$REPO"/"$base"_non_rna.fq "$REPO_unmerge"/"$base"_R1.fq "$REPO_unmerge"/"$base"_R2.fq
 
