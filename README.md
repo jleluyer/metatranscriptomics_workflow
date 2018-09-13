@@ -13,7 +13,7 @@ The software is provided "as is", without warranty of any kind, express or impli
 ```
 
 ```
-qsub 00_scripts/02_
+qsub 00_scripts/02_index_rnadb.sh
 ```
 
 ```
