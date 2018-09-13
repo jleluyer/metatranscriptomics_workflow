@@ -8,10 +8,9 @@
 
 cd $PBS_O_WORKDIR
 
-
 #usage sorterna
 base=__BASE__
-REPO_unmerge="/scratch/home1/jleluyer/capamax/04_filtered_non_rna_unmerge"
-REPO_fastqjoin="/scratch/home1/jleluyer/capamax/04_filtered_non_rna_join"
+REPO_unmerge="04_filtered_non_rna_unmerge"
+REPO_fastqjoin="04_filtered_non_rna_join"
 
 fastq-join -p 8 -m 6 "$REPO_unmerge"/"$base"_R1.fq "$REPO_unmerge"/"$base"_R2.fq -o "$REPO_fastqjoin"/"$base"
