@@ -56,6 +56,8 @@ This pipeline is adapted from [Metatrans](http://www.metatrans.org/) pipeline
 ## Authors
 
 Jérémy Le Luyer: jeremy.le.luyer@ifremer.fr
+
 Quentin Schull: quentin.schull@ifremer.fr
+
 Denis Saulnier: denis.saulnier@ifremer.fr
 
