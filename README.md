@@ -43,7 +43,7 @@ qsub 00_scripts/02_index_rnadb.sh
 
 [Fastq-join](https://bioconda.github.io/recipes/fastq-join/README.html)
 
-[FragGenScan](http://omics.informatics.indiana.edu/FragGeneScan/)
+[FragGeneScan](http://omics.informatics.indiana.edu/FragGeneScan/)
 
 [SortMeRna](http://bioinfo.lifl.fr/RNA/sortmerna/)
 
