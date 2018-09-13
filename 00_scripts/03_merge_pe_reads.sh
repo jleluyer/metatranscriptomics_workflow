@@ -8,13 +8,12 @@
 
 cd $PBS_O_WORKDIR
 
-
-. /appli/bioinfo/sortmerna/latest/env.sh
-
+#module load
+#sortmerna
 
 #usage sorterna
 base=__BASE__
-REPO="/scratch/home1/jleluyer/capamax/03_trimmed"
+REPO="03_trimmed"
 
 zcat "$REPO"/"$base"_R1.paired.fastq.gz >"$REPO"/"$base"_R1.paired.fastq
 zcat "$REPO"/"$base"_R2.paired.fastq.gz >"$REPO"/"$base"_R2.paired.fastq

@@ -4,7 +4,7 @@
 rm 00_scripts/datarmor_jobs/FILTER*sh
 
 # launch scripts for Colosse
-for file in $(ls /scratch/home1/jleluyer/capamax/03_trimmed/*_combined.fq|sed 's/_combined.fq//g'|sort -u)
+for file in $(ls 03_trimmed/*_combined.fq|sed 's/_combined.fq//g'|sort -u)
 
 do
 	base=$(basename "$file")

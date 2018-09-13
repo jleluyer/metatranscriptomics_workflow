@@ -9,13 +9,15 @@
 
 cd $PBS_O_WORKDIR
 
-. /appli/bioinfo/sortmerna/latest/env.sh
+# module load
+#sortmerna
+
 
 #usage sorterna
-repodb="/home1/datawork/jleluyer/00_ressources/rRNA_database/"
-REPO="/scratch/home1/jleluyer/capamax/03_trimmed"
-repo_rna="/scratch/home1/jleluyer/capamax/04_filtered_rna"
-repo_non_rna="/scratch/home1/jleluyer/capamax/04_filtered_non_rna"
+repodb="/path/to/db/dir"
+REPO="03_trimmed"
+repo_rna="04_filtered_rna"
+repo_non_rna="04_filtered_non_rna"
 base=__BASE__
 NCPU=12
 
