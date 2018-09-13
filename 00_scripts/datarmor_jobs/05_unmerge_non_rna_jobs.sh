@@ -4,7 +4,7 @@
 rm 00_scripts/datarmor_jobs/UNMERGE*sh
 
 # launch scripts for Colosse
-for file in $(ls /scratch/home1/jleluyer/capamax/04_filtered_non_rna/*.fq|sed 's/_non_rna.fq//g'|sort -u)
+for file in $(ls 04_filtered_non_rna/*.fq|sed 's/_non_rna.fq//g'|sort -u)
 
 do
 	base=$(basename "$file")
