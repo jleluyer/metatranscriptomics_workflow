@@ -10,6 +10,7 @@
 
 cd $PBS_O_WORKDIR
 
+. module/trimmomatic/latest/env.sh
 
 TIMESTAMP=$(date +%Y-%m-%d_%Hh%Mm%Ss)
 SCRIPT=$0
@@ -25,13 +26,13 @@ cp $SCRIPT $LOG_FOLDER/"$TIMESTAMP"_"$NAME"
 ADAPTERFILE="01_info_files/adapters.fasta"
 NCPU=8
 base=__BASE__
-REPO="/path/to/raw/files"
+REPO="scratch/capamax"
 
 trimmomatic PE -Xmx60G \
         -threads 8 \
         -phred33 \
-        "$REPO"/02_data/"$base"_R1.fastq.gz \
-        "$REPO"/02_data/"$base"_R2.fastq.gz \
+        02_data/"$base"_R1.fastq.gz \
+        02_data/"$base"_R2.fastq.gz \
         "$REPO"/03_trimmed/"$base"_R1.paired.fastq.gz \
         "$REPO"/03_trimmed/"$base"_R1.single.fastq.gz \
         "$REPO"/03_trimmed/"$base"_R2.paired.fastq.gz \
