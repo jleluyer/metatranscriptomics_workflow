@@ -13,7 +13,7 @@ The software is provided "as is", without warranty of any kind, express or impli
 ```
 
 ```
-qsub 00_scripts/02_
+qsub 00_scripts/02_index_rnadb.sh
 ```
 
 ```
@@ -36,19 +36,25 @@ qsub 00_scripts/02_
 00_scripts/datarmor_jobs/07_fraggenescan_jobs.sh
 ```
 
-
-## Notes
-
 ## Dependencies
 
 [Fastq-join](https://bioconda.github.io/recipes/fastq-join/README.html)
 
-[FragGenScan](http://omics.informatics.indiana.edu/FragGeneScan/)
+[FragGeneScan](http://omics.informatics.indiana.edu/FragGeneScan/)
 
 [SortMeRna](http://bioinfo.lifl.fr/RNA/sortmerna/)
 
 [Trimmomatic](http://www.usadellab.org/cms/index.php?page=trimmomatic)
 
-## Dependences
+## Notes
 
-This pipeline is adapted from [Metatrans](http://www.metatrans.org/) pipeline 
+This pipeline is adapted from [Metatrans](http://www.metatrans.org/) pipeline
+
+## Authors
+
+Jérémy Le Luyer: jeremy.le.luyer@ifremer.fr
+
+Quentin Schull: quentin.schull@ifremer.fr
+
+Denis Saulnier: denis.saulnier@ifremer.fr
+
