@@ -1,6 +1,6 @@
 # metatranscriptomics_workflow
 
-Pipeline for analyses of dual-RNAseq metatranscriptomics data
+Pipeline for analyses of Dual-RNAseq metatranscriptomics data in non-model species
 
 **WARNING**
 
