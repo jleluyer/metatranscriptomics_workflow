@@ -13,16 +13,11 @@
 
 # Global variables
 
-DATAINPUT="/scratch/home1/jleluyer/capamax/03_trimmed"
-DATAOUTPUT="/scratch/home1/jleluyer/capamax/04_mapped/tmaritimum/"
+DATAINPUT="/scratch/capamax/03_trimmed"
+DATAOUTPUT="/scratch/capamax/04_mapped/tmaritimum/"
 
-#For combined
-#GENOMEFOLDER_combined="10_reference_final"
-#GENOME_combined="filtered.transcriptome"
-
-
-GENOMEFOLDER="/00_ressources/genomes/T_maritimum/"
-GENOME="tmaritimum_index"
+GENOMEFOLDER="/00_ressources/genomes/combined/"
+GENOME="combined_index"
 platform="Illumina"
 
 #move to present working dir
