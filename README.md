@@ -79,9 +79,9 @@ qsub 00_scripts/13_gmap_index.sh
 
 [Blast](https://www.ncbi.nlm.nih.gov/books/NBK279680/)
 
-[Fastq-join](https://bioconda.github.io/recipes/fastq-join/README.html)
+[cd-hit](http://weizhongli-lab.org/cd-hit/)
 
-[FragGeneScan](http://omics.informatics.indiana.edu/FragGeneScan/)
+[Fastq-join](https://bioconda.github.io/recipes/fastq-join/README.html)
 
 [SortMeRna](http://bioinfo.lifl.fr/RNA/sortmerna/)
 
