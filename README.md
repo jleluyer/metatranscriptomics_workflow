@@ -1,42 +1,79 @@
 # metatranscriptomics_workflow
 
-Pipeline for analyses of bacterial metatranscriptomics data
+Pipeline for analyses of dual-RNAseq metatranscriptomics data
 
 WARNING
 
 The software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
 
-### Step-by-step documentation
+## Step-by-step documentation
 
+### Trimming
 ```
 00_scripts/datarmor_jobs/01_trimmomatic_jobs_pe.sh
 ```
 
+### Meta-transcriptome assembly (microbiome compartment)
 ```
-qsub 00_scripts/02_index_rnadb.sh
+qsub 00_scripts/02_trinity_assembly.sh
+```
+
+### Assembly statistics
+```
+qsub 00_scripts/03_assembly_stats.sh
+```
+
+### Meta-transcriptome filtering
+
+```
+qsub 00_scripts/04_longest_isoform.sh
 ```
 
 ```
-00_scripts/datarmor_jobs/03_merge_pe_reads_jobs.sh
+qsub 00_scripts/datarmor_jobs/05_prepare_reference.sh
 ```
 
 ```
-00_scripts/datarmor_jobs/04_filtering_rna_jobs.sh
+qsub 00_scripts/06_transcripts_abundance.sh
 ```
 
 ```
-00_scripts/datarmor_jobs/05_unmerge_non_rna_jobs.sh
+qsub 00_scripts/07_blastn_conta_host.sh
 ```
 
 ```
-00_scripts/datarmor_jobs/06_fastq_join_jobs.sh
+qsub 00_scripts/08_combine_matrix.sh
 ```
 
 ```
-00_scripts/datarmor_jobs/07_fraggenescan_jobs.sh
+qsub 00_scripts/10_bis_filter_rna.sh
 ```
+
+```
+qsub 00_scripts/11_fraggenescan.sh
+```
+
+### Mapping
+
+```
+qsub 00_scripts/12_gmap_index.sh
+```
+
+```
+00_scripts/datarmor_jobs/13_gsnap_mapping.sh
+```
+
+### Counting
+
+```
+00_scripts/datarmor_jobs/14_htseq_count.sh
+```
+
+### Annotation
 
 ## Dependencies
+
+[Blast](https://www.ncbi.nlm.nih.gov/books/NBK279680/)
 
 [Fastq-join](https://bioconda.github.io/recipes/fastq-join/README.html)
 
@@ -46,9 +83,11 @@ qsub 00_scripts/02_index_rnadb.sh
 
 [Trimmomatic](http://www.usadellab.org/cms/index.php?page=trimmomatic)
 
+[Trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki)
+
 ## Notes
 
-This pipeline is adapted from [Metatrans](http://www.metatrans.org/) pipeline
+This pipeline is adapted from [Metatrans](http://www.metatrans.org/).
 
 ## Authors
 
