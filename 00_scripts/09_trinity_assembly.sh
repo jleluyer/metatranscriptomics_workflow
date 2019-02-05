@@ -19,10 +19,10 @@ cp $SCRIPT $LOG_FOLDER/"$TIMESTAMP"_"$NAME"
 #cat $(cat 01_info_files/list_ind_assembly.txt|grep "R1") >/scratch/home1/jleluyer/capamax/03_trimmed/combined_R1.fq.gz
 #cat $(cat 01_info_files/list_ind_assembly.txt|grep "R2") >/scratch/home1/jleluyer/capamax/03_trimmed/combined_R2.fq.gz
 
-cd /scratch/home1/jleluyer/capamax/03_trimmed/
+cd /scratch/capamax/03_trimmed/
 #Global variables
-READSLEFT="/scratch/home1/jleluyer/capamax/03_trimmed/combined_R1.fq.gz"
-READSRIGHT="/scratch/home1/jleluyer/capamax/03_trimmed/combined_R2.fq.gz"
+READSLEFT="/scratch/capamax/03_trimmed/combined_R1.fq.gz"
+READSRIGHT="/scratch/capamax/03_trimmed/combined_R2.fq.gz"
 #READSSINGLE="03_trimmed/assembly/host.fastq.gz"
 
 #Trinity variables
