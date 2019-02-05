@@ -30,11 +30,11 @@ qsub 00_scripts/04_longest_isoform.sh
 ```
 
 ```
-qsub 00_scripts/datarmor_jobs/05_prepare_reference.sh
+qsub 00_scripts/05_prepare_reference.sh
 ```
 
 ```
-qsub 00_scripts/06_transcripts_abundance.sh
+qsub 00_scripts/datarmor_jobs/06_transcripts_abundance.sh
 ```
 
 ```
@@ -53,20 +53,24 @@ qsub 00_scripts/10_bis_filter_rna.sh
 qsub 00_scripts/11_fraggenescan.sh
 ```
 
+```
+qsub 00_scripts/12_cdhit.sh
+```
+
 ### Mapping
 
 ```
-qsub 00_scripts/12_gmap_index.sh
+qsub 00_scripts/13_gmap_index.sh
 ```
 
 ```
-00_scripts/datarmor_jobs/13_gsnap_mapping.sh
+00_scripts/datarmor_jobs/14_gsnap_mapping_jobs.sh
 ```
 
 ### Counting
 
 ```
-00_scripts/datarmor_jobs/14_htseq_count.sh
+00_scripts/datarmor_jobs/15_htseq_count.sh
 ```
 
 ### Annotation
